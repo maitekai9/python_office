@@ -3,7 +3,7 @@ import pandas as pd
 
 class SkuChart(object):
     def __init__(self):
-        data = pd.read_excel('F:\\python\\python_office\\file\\extra1.xlsx')
+        data = pd.read_excel('F:\\python\\python_office\\file\\29-SKU-有问题.xlsx')
         self.sku_data = data.values
 
     def get_ean_list(self):
@@ -21,7 +21,7 @@ class SkuChart(object):
             data_map.get('ASIN').append(asin_map.get(value[1], ''))
             data_map.get('TITLE').append(title_map.get(value[1], ''))
         df = pd.DataFrame(data_map)
-        df.to_excel("F:\\python\\python_office\\file\\extra1.xlsx", sheet_name='处理后', index=False)
+        df.to_excel("F:\\python\\python_office\\file\\29-SKU-有问题.xlsx", sheet_name='处理后', index=False)
 
 
 if __name__ == '__main__':
