@@ -1,10 +1,10 @@
 import time
-
+import sys
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from handle_chart import SkuChart
-
-sku_chart = SkuChart()
+print(sys.argv[1])
+sku_chart = SkuChart(sys.argv[1])
 
 options = webdriver.ChromeOptions()
 # 设置浏览器不会关闭

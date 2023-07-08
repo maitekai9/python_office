@@ -2,8 +2,9 @@ import pandas as pd
 
 
 class SkuChart(object):
-    def __init__(self):
-        data = pd.read_excel('F:\\python\\python_office\\file\\29-SKU-有问题.xlsx')
+    def __init__(self, file_name):
+        self.path = 'C:\\Users\\Administrator\\Desktop\\' + file_name
+        data = pd.read_excel(self.path)
         self.sku_data = data.values
 
     def get_ean_list(self):
@@ -21,9 +22,8 @@ class SkuChart(object):
             data_map.get('ASIN').append(asin_map.get(value[1], ''))
             data_map.get('TITLE').append(title_map.get(value[1], ''))
         df = pd.DataFrame(data_map)
-        df.to_excel("F:\\python\\python_office\\file\\29-SKU-有问题.xlsx", sheet_name='处理后', index=False)
+        df.to_excel(self.path, sheet_name='处理后', index=False)
 
 
 if __name__ == '__main__':
-    s = SkuChart()
-    print(s.get_ean_list())
+    pass
