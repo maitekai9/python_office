@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from handle_chart import SkuChart
 # print(sys.argv[1])
-sku_chart = SkuChart('72sku重复.xlsx')
+sku_chart = SkuChart('1FR-2669SKU-BBK0718.xlsx')
 
 options = webdriver.ChromeOptions()
 # 设置浏览器不会关闭
